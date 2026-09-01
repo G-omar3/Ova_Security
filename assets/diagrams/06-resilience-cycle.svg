@@ -1,1 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920" role="img" aria-labelledby="title desc"><title id="title">Resilience mode cycle</title><desc id="desc">Cycle for monitoring, detecting anomaly, switching mode, minimal protection, recovery, and return to normal.</desc><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0 0 10 5 0 10z" fill="#4c3ec7"/></marker><filter id="s"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#102033" flood-opacity=".08"/></filter><style>.bg{fill:#fff}.frame{fill:#fff;stroke:#d7dcea;stroke-width:2;rx:24}.t{font:800 34px Arial;fill:#141633}.st{font:italic 21px Arial;fill:#586071}.step{fill:#fff;stroke:#4c3ec7;stroke-width:2.4;rx:20;filter:url(#s)}.num{fill:#4c3ec7}.numt{font:800 24px Arial;fill:#fff}.h{font:800 20px Arial;fill:#141633}.p{font:500 15px Arial;fill:#344456}.line{stroke:#4c3ec7;stroke-width:7;fill:none;marker-end:url(#a)}.back{stroke:#4c3ec7;stroke-width:6;fill:none;marker-end:url(#a)}.ok{stroke:#178f45}</style></defs><rect class="bg" width="1600" height="920"/><rect x="24" y="24" width="1552" height="872" class="frame"/><text x="70" y="76" class="t">Resilience mode cycle</text><text x="70" y="112" class="st">The appliance keeps a minimal protective posture, recovers services, then returns to normal operation.</text><g transform="translate(70 300)"><rect class="step" width="185" height="300"/><circle cx="92" cy="-15" r="28" class="num"/><text x="85" y="-6" class="numt">1</text><text x="45" y="115" class="h">Monitoring</text><text x="32" y="160" class="p">services, network,</text><text x="52" y="190" class="p">temperature</text></g><g transform="translate(330 300)"><rect class="step" width="185" height="300"/><circle cx="92" cy="-15" r="28" class="num"/><text x="85" y="-6" class="numt">2</text><text x="30" y="115" class="h">Anomaly detected</text><text x="42" y="160" class="p">failure, outage,</text><text x="62" y="190" class="p">attack</text></g><g transform="translate(590 300)"><rect class="step" width="185" height="300"/><circle cx="92" cy="-15" r="28" class="num"/><text x="85" y="-6" class="numt">3</text><text x="45" y="115" class="h">Mode decision</text><text x="42" y="160" class="p">NORMAL /</text><text x="35" y="190" class="p">DEGRADED / SAFE</text></g><g transform="translate(850 300)"><rect class="step" width="185" height="300"/><circle cx="92" cy="-15" r="28" class="num"/><text x="85" y="-6" class="numt">4</text><text x="35" y="115" class="h">Minimal protection</text><text x="35" y="160" class="p">firewall and</text><text x="45" y="190" class="p">local rules</text></g><g transform="translate(1110 300)"><rect class="step" width="185" height="300"/><circle cx="92" cy="-15" r="28" class="num"/><text x="85" y="-6" class="numt">5</text><text x="58" y="115" class="h">Recovery</text><text x="42" y="160" class="p">checks and</text><text x="22" y="190" class="p">resynchronization</text></g><g transform="translate(1370 300)"><rect class="step" width="185" height="300"/><circle cx="92" cy="-15" r="28" class="num"/><text x="85" y="-6" class="numt">6</text><text x="37" y="115" class="h">Return to normal</text><text x="38" y="160" class="p">services restored</text></g><path d="M255 450h75" class="line"/><path d="M515 450h75" class="line"/><path d="M775 450h75" class="line"/><path d="M1035 450h75" class="line"/><path d="M1295 450h75" class="line"/><path d="M1462 600 C1462 760 162 760 162 600" class="back"/><text x="760" y="810" class="p">continuous return loop</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Resilience mode cycle</title>
+  <desc id="desc">A fully framed resilience cycle for monitoring, anomaly detection, mode decision, minimal protection, recovery, and return to normal.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#3346B8"/>
+    </marker>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1f2937" flood-opacity=".10"/>
+    </filter>
+    <style>
+      .page{fill:#f8fafc}
+      .frame{fill:#ffffff;stroke:#ccd6e2;stroke-width:2.4;rx:24}
+      .cycle{fill:#ffffff;stroke:#d8dee9;stroke-width:2;rx:22;filter:url(#shadow)}
+      .step{fill:#ffffff;stroke:#4a3fd1;stroke-width:2.4;rx:18;filter:url(#shadow)}
+      .badge{fill:#4a3fd1}
+      .title{font:800 32px Arial;fill:#111827}
+      .subtitle{font:italic 19px Arial;fill:#4b5563}
+      .badgeText{font:800 20px Arial;fill:#ffffff}
+      .head{font:800 17px Arial;fill:#111827}
+      .body{font:500 13px Arial;fill:#374151}
+      .arrow{stroke:#3346B8;stroke-width:4.5;fill:none;marker-end:url(#arrow)}
+      .return{stroke:#4a3fd1;stroke-width:4.5;fill:none;marker-end:url(#arrow)}
+      .label{font:700 14px Arial;fill:#3346B8}
+    </style>
+  </defs>
+  <rect class="page" width="1400" height="760"/>
+  <rect x="20" y="20" width="1360" height="720" class="frame"/>
+  <text x="60" y="72" class="title">Resilience mode cycle</text>
+  <text x="60" y="106" class="subtitle">The appliance keeps a minimal protective posture, recovers services, then returns to normal operation.</text>
+  <rect x="60" y="150" width="1280" height="510" class="cycle"/>
+
+  <g transform="translate(92 255)">
+    <rect class="step" width="150" height="245"/>
+    <circle class="badge" cx="75" cy="-18" r="25"/>
+    <text class="badgeText" x="69" y="-10">1</text>
+    <text class="head" x="32" y="92">Monitoring</text>
+    <text class="body" x="28" y="132">services</text>
+    <text class="body" x="28" y="160">network</text>
+    <text class="body" x="28" y="188">resources</text>
+  </g>
+
+  <g transform="translate(302 255)">
+    <rect class="step" width="150" height="245"/>
+    <circle class="badge" cx="75" cy="-18" r="25"/>
+    <text class="badgeText" x="69" y="-10">2</text>
+    <text class="head" x="18" y="92">Anomaly</text>
+    <text class="head" x="28" y="117">detected</text>
+    <text class="body" x="28" y="155">failure</text>
+    <text class="body" x="28" y="183">outage</text>
+    <text class="body" x="28" y="211">attack signal</text>
+  </g>
+
+  <g transform="translate(512 255)">
+    <rect class="step" width="150" height="245"/>
+    <circle class="badge" cx="75" cy="-18" r="25"/>
+    <text class="badgeText" x="69" y="-10">3</text>
+    <text class="head" x="28" y="92">Mode</text>
+    <text class="head" x="24" y="117">decision</text>
+    <text class="body" x="28" y="155">NORMAL</text>
+    <text class="body" x="28" y="183">DEGRADED</text>
+    <text class="body" x="28" y="211">SAFE</text>
+  </g>
+
+  <g transform="translate(722 255)">
+    <rect class="step" width="150" height="245"/>
+    <circle class="badge" cx="75" cy="-18" r="25"/>
+    <text class="badgeText" x="69" y="-10">4</text>
+    <text class="head" x="28" y="92">Minimal</text>
+    <text class="head" x="18" y="117">protection</text>
+    <text class="body" x="28" y="155">firewall</text>
+    <text class="body" x="28" y="183">local rules</text>
+    <text class="body" x="28" y="211">safe posture</text>
+  </g>
+
+  <g transform="translate(932 255)">
+    <rect class="step" width="150" height="245"/>
+    <circle class="badge" cx="75" cy="-18" r="25"/>
+    <text class="badgeText" x="69" y="-10">5</text>
+    <text class="head" x="40" y="100">Recovery</text>
+    <text class="body" x="28" y="150">checks</text>
+    <text class="body" x="28" y="178">restart</text>
+    <text class="body" x="28" y="206">sync</text>
+  </g>
+
+  <g transform="translate(1142 255)">
+    <rect class="step" width="150" height="245"/>
+    <circle class="badge" cx="75" cy="-18" r="25"/>
+    <text class="badgeText" x="69" y="-10">6</text>
+    <text class="head" x="28" y="92">Return</text>
+    <text class="head" x="24" y="117">to normal</text>
+    <text class="body" x="28" y="160">services</text>
+    <text class="body" x="28" y="188">restored</text>
+  </g>
+
+  <path class="arrow" d="M242 378h60"/>
+  <path class="arrow" d="M452 378h60"/>
+  <path class="arrow" d="M662 378h60"/>
+  <path class="arrow" d="M872 378h60"/>
+  <path class="arrow" d="M1082 378h60"/>
+  <path class="return" d="M1217 500 C1217 612 167 612 167 500"/>
+  <text x="650" y="635" class="label">continuous monitoring loop</text>
+</svg>

@@ -1,14 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
-  <title id="title">Ova Security assistant and knowledge architecture</title>
-  <desc id="desc">Assistant architecture using local documentation, reports, logs, alerts, retrieval, language model response, and human validation.</desc>
-  <defs><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2340" flood-opacity=".12"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0b355d"/></marker><style>.bg{fill:#f7fbfd}.title{font:800 34px Arial;fill:#082847}.k{font:700 16px Arial;fill:#008b96;letter-spacing:2px}.box{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:18;filter:url(#shadow)}.ai{fill:#f4f0ff;stroke:#7452c7}.ctx{fill:#e9fbfb;stroke:#0097a7}.human{fill:#f2fbf5;stroke:#2aa865}.h{font:800 22px Arial;fill:#082847}.p{font:500 15px Arial;fill:#566779}.line{stroke:#0b355d;stroke-width:2.8;fill:none;marker-end:url(#arrow)}</style></defs>
-  <rect class="bg" width="1280" height="720"/>
-  <text x="55" y="60" class="k">ASSISTANT LAYER</text><text x="55" y="102" class="title">Operational help grounded in approved project context</text>
-  <rect x="65" y="175" width="250" height="320" class="box"/>
-  <text x="100" y="225" class="h">Knowledge inputs</text><text x="100" y="265" class="p">Documentation</text><text x="100" y="300" class="p">Reports</text><text x="100" y="335" class="p">Alerts</text><text x="100" y="370" class="p">Logs</text><text x="100" y="405" class="p">Procedures</text>
-  <rect x="395" y="215" width="250" height="240" class="box ctx"/><text x="430" y="270" class="h">Retrieval</text><text x="430" y="310" class="p">Find the most relevant</text><text x="430" y="338" class="p">events, rules, assets,</text><text x="430" y="366" class="p">and documentation.</text>
-  <rect x="725" y="215" width="250" height="240" class="box ai"/><text x="760" y="270" class="h">Assistant response</text><text x="760" y="310" class="p">Explain the situation,</text><text x="760" y="338" class="p">summarize evidence,</text><text x="760" y="366" class="p">and propose actions.</text>
-  <rect x="1055" y="215" width="160" height="240" class="box human"/><text x="1085" y="270" class="h">Operator</text><text x="1085" y="310" class="p">Validates</text><text x="1085" y="338" class="p">sensitive</text><text x="1085" y="366" class="p">actions.</text>
-  <path class="line" d="M315 335h80"/><path class="line" d="M645 335h80"/><path class="line" d="M975 335h80"/>
-  <text x="395" y="580" class="p">The assistant supports investigation and explanation; it does not silently apply critical security decisions.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security - assistant and RAG architecture</title>
+  <desc id="desc">Assistant architecture inspired by the report RAG diagram.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M0 0 10 5 0 10z" fill="#1254d8"/></marker><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0a2a52" flood-opacity=".09"/></filter><style>.bg{fill:#fff}.title{font:800 36px Arial;fill:#0b2d63}.sub{font:italic 23px Arial;fill:#0b2d63}.num{font:800 34px Arial;fill:#0b2d63}.boxB{fill:#f3f8ff;stroke:#0b56e5;stroke-width:3;rx:16;filter:url(#s)}.boxG{fill:#f3fff7;stroke:#087532;stroke-width:3;rx:16;filter:url(#s)}.boxD{fill:#0b2d63;stroke:#0b2d63;stroke-width:3;rx:16;filter:url(#s)}.hB{font:800 24px Arial;fill:#0b2d63}.hW{font:800 24px Arial;fill:#fff}.txt{font:600 17px Arial;fill:#1d2633}.arrowB{stroke:#1254d8;stroke-width:5;fill:none;marker-end:url(#a)}.arrowG{stroke:#087532;stroke-width:5;fill:none;marker-end:url(#a)}</style></defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text x="70" y="78" class="num">1</text><text x="120" y="78" class="title">Assistant model approach</text>
+  <text x="120" y="116" class="sub">Use a model as a frozen reasoning interface, then provide local knowledge at question time</text>
+  <rect x="140" y="165" width="470" height="120" class="boxB"/><text x="245" y="215" class="hB">Pre-trained model</text><text x="235" y="250" class="txt">language understanding and response generation</text>
+  <rect x="760" y="165" width="520" height="120" class="boxD"/><text x="845" y="215" class="hW">Controlled assistant service</text><text x="845" y="250" class="hW">explain, summarize, recommend</text>
+  <path class="arrowB" d="M610 225h150"/>
+  <text x="70" y="420" class="num">2</text><text x="120" y="420" class="title">Retrieval augmented generation</text>
+  <text x="120" y="458" class="sub">Provide the right project knowledge when the operator asks a question</text>
+  <rect x="140" y="530" width="380" height="100" class="boxG"/><text x="225" y="570" class="hB">Documents</text><text x="218" y="600" class="txt">reports, procedures, alerts, logs</text>
+  <rect x="660" y="530" width="380" height="100" class="boxG"/><text x="765" y="570" class="hB">Embeddings</text><text x="745" y="600" class="txt">semantic representation</text>
+  <rect x="1180" y="530" width="300" height="100" class="boxG"/><text x="1260" y="570" class="hB">Vector index</text><text x="1245" y="600" class="txt">relevant context</text>
+  <rect x="1180" y="705" width="300" height="92" class="boxB"/><text x="1220" y="745" class="hB">Question to answer</text><text x="1215" y="775" class="txt">cited and contextualized</text>
+  <path class="arrowG" d="M520 580h140"/><path class="arrowG" d="M1040 580h140"/><path class="arrowB" d="M1330 630v75"/><path class="arrowB" d="M1020 285 C920 405 850 455 850 530"/><path class="arrowB" d="M1080 285 C1220 390 1330 440 1330 530"/>
 </svg>

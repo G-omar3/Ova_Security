@@ -1,14 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
-  <title id="title">Ova Security data and evidence model</title>
-  <desc id="desc">Data flow from raw signals to normalized events, asset context, decisions, and signed evidence.</desc>
-  <defs><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2340" flood-opacity=".12"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0b355d"/></marker><style>.bg{fill:#f7fbfd}.title{font:800 34px Arial;fill:#082847}.k{font:700 16px Arial;fill:#008b96;letter-spacing:2px}.box{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:18;filter:url(#shadow)}.blue{fill:#edf6ff;stroke:#3b7fc0}.cyan{fill:#e9fbfb;stroke:#0097a7}.green{fill:#f2fbf5;stroke:#2aa865}.purple{fill:#f4f0ff;stroke:#7452c7}.h{font:800 22px Arial;fill:#082847}.p{font:500 15px Arial;fill:#566779}.line{stroke:#0b355d;stroke-width:2.8;fill:none;marker-end:url(#arrow)}</style></defs>
-  <rect class="bg" width="1280" height="720"/>
-  <text x="55" y="60" class="k">DATA AND EVIDENCE MODEL</text><text x="55" y="102" class="title">From technical signals to verifiable security records</text>
-  <rect x="55" y="175" width="245" height="290" class="box blue"/><text x="88" y="222" class="h">Raw signals</text><text x="88" y="260" class="p">Network sessions</text><text x="88" y="292" class="p">IDS alerts</text><text x="88" y="324" class="p">System events</text><text x="88" y="356" class="p">Scanner findings</text>
-  <rect x="370" y="130" width="250" height="150" class="box cyan"/><text x="404" y="182" class="h">Normalize</text><text x="404" y="215" class="p">Clean fields, timestamps,</text><text x="404" y="240" class="p">severity, source, target.</text>
-  <rect x="370" y="360" width="250" height="150" class="box cyan"/><text x="404" y="412" class="h">Correlate</text><text x="404" y="445" class="p">Connect events to assets,</text><text x="404" y="470" class="p">rules, users, and services.</text>
-  <rect x="700" y="175" width="245" height="290" class="box green"/><text x="733" y="222" class="h">Decisions</text><text x="733" y="260" class="p">Block or allow</text><text x="733" y="292" class="p">Accept risk</text><text x="733" y="324" class="p">Open remediation</text><text x="733" y="356" class="p">Generate report</text>
-  <rect x="1015" y="175" width="210" height="290" class="box purple"/><text x="1048" y="222" class="h">Evidence</text><text x="1048" y="260" class="p">Hash</text><text x="1048" y="292" class="p">Chain</text><text x="1048" y="324" class="p">Sign</text><text x="1048" y="356" class="p">Verify</text>
-  <path class="line" d="M300 315 C335 315 340 205 370 205"/><path class="line" d="M300 335 C335 335 340 435 370 435"/><path class="line" d="M620 205 C670 205 670 320 700 320"/><path class="line" d="M620 435 C670 435 670 320 700 320"/><path class="line" d="M945 320h70"/>
-  <text x="370" y="590" class="p">The model keeps raw collection, operational decisions, and signed audit records separated.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="880" viewBox="0 0 1600 880" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security - data and evidence model</title>
+  <desc id="desc">Data and evidence model inspired by the report visual structure.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M0 0 10 5 0 10z" fill="#1254d8"/></marker><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0a2a52" flood-opacity=".09"/></filter><style>.bg{fill:#fff}.title{font:800 36px Arial;fill:#0b2d63}.sub{font:italic 23px Arial;fill:#0b2d63}.panel{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.1;rx:22;filter:url(#s)}.panelG{fill:#fbfffc;stroke:#087532;stroke-width:2.1;rx:22;filter:url(#s)}.box{fill:#fff;stroke:#c8d5df;stroke-width:1.5;rx:14}.boxG{fill:#f7fff9;stroke:#b4d1be;stroke-width:1.5;rx:14}.hB{font:800 24px Arial;fill:#0b56e5}.hG{font:800 24px Arial;fill:#087532}.txt{font:600 17px Arial;fill:#1d2633}.small{font:500 15px Arial;fill:#526171}.arrow{stroke:#1254d8;stroke-width:5;fill:none;marker-end:url(#a)}</style></defs>
+  <rect class="bg" width="1600" height="880"/>
+  <text x="70" y="78" class="title">Data and evidence model</text><text x="70" y="116" class="sub">Separate raw signals, normalized context, decisions, and verifiable records</text>
+  <rect x="70" y="180" width="300" height="520" class="panel"/>
+  <text x="115" y="230" class="hB">Raw sources</text>
+  <rect x="105" y="270" width="230" height="65" class="box"/><text x="135" y="310" class="txt">Network sessions</text>
+  <rect x="105" y="360" width="230" height="65" class="box"/><text x="135" y="400" class="txt">Detection alerts</text>
+  <rect x="105" y="450" width="230" height="65" class="box"/><text x="135" y="490" class="txt">System events</text>
+  <rect x="105" y="540" width="230" height="65" class="box"/><text x="135" y="580" class="txt">Scanner findings</text>
+  <rect x="475" y="165" width="650" height="560" class="panelG"/>
+  <text x="695" y="215" class="hG">Ova Security data processing</text>
+  <rect x="525" y="260" width="250" height="92" class="box"/><text x="575" y="300" class="txt">Normalize</text><text x="575" y="327" class="small">fields, time, source, target</text>
+  <rect x="825" y="260" width="250" height="92" class="box"/><text x="875" y="300" class="txt">Correlate</text><text x="875" y="327" class="small">assets, services, rules</text>
+  <rect x="525" y="420" width="250" height="92" class="box"/><text x="575" y="460" class="txt">Prioritize</text><text x="575" y="487" class="small">severity, exposure, context</text>
+  <rect x="825" y="420" width="250" height="92" class="box"/><text x="875" y="460" class="txt">Decide</text><text x="875" y="487" class="small">operator validation</text>
+  <rect x="640" y="580" width="330" height="78" class="boxG"/><text x="705" y="627" class="txt">Signed audit record</text>
+  <rect x="1230" y="180" width="300" height="520" class="panel"/>
+  <text x="1280" y="230" class="hB">Outputs</text>
+  <rect x="1265" y="270" width="230" height="65" class="box"/><text x="1295" y="310" class="txt">Dashboard status</text>
+  <rect x="1265" y="360" width="230" height="65" class="box"/><text x="1295" y="400" class="txt">Incident report</text>
+  <rect x="1265" y="450" width="230" height="65" class="box"/><text x="1295" y="490" class="txt">Firewall decision</text>
+  <rect x="1265" y="540" width="230" height="65" class="box"/><text x="1295" y="580" class="txt">Audit evidence</text>
+  <path class="arrow" d="M370 440h105"/><path class="arrow" d="M775 306h50"/><path class="arrow" d="M650 352v68"/><path class="arrow" d="M950 352v68"/><path class="arrow" d="M775 466h50"/><path class="arrow" d="M970 620h260"/><text x="520" y="790" class="sub">Every sensitive decision is linked to context and preserved as evidence.</text>
 </svg>

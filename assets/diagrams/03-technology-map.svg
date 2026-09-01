@@ -1,11 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
-  <title id="title">Ova Security technology role map</title>
-  <desc id="desc">Technology map showing platform, security, application, and assistant components.</desc>
-  <defs><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2340" flood-opacity=".12"/></filter><style>.bg{fill:#f7fbfd}.title{font:800 34px Arial;fill:#082847}.k{font:700 16px Arial;fill:#008b96;letter-spacing:2px}.col{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:18;filter:url(#shadow)}.head{fill:#071c33;rx:18}.headText{font:800 22px Arial;fill:#fff}.item{fill:#f3f8fb;stroke:#c9dbe7;stroke-width:1.6;rx:12}.item2{fill:#e9fbfb;stroke:#00a3ad}.item3{fill:#f2fbf5;stroke:#2aa865}.item4{fill:#f4f0ff;stroke:#7452c7}.h{font:800 18px Arial;fill:#082847}.p{font:500 14px Arial;fill:#566779}</style></defs>
-  <rect class="bg" width="1280" height="720"/>
-  <text x="55" y="60" class="k">TECHNOLOGY ROLE MAP</text><text x="55" y="102" class="title">Open-source building blocks integrated into one product</text>
-  <g transform="translate(55 145)"><rect class="col" width="265" height="500"/><rect class="head" width="265" height="68"/><text x="28" y="43" class="headText">Platform</text><rect x="24" y="100" width="217" height="70" class="item"/><text x="42" y="130" class="h">Linux OS</text><text x="42" y="154" class="p">runtime and services</text><rect x="24" y="195" width="217" height="70" class="item"/><text x="42" y="225" class="h">System timers</text><text x="42" y="249" class="p">scheduled collection</text><rect x="24" y="290" width="217" height="70" class="item"/><text x="42" y="320" class="h">Local storage</text><text x="42" y="344" class="p">logs and evidence</text></g>
-  <g transform="translate(355 145)"><rect class="col" width="265" height="500"/><rect class="head" width="265" height="68"/><text x="28" y="43" class="headText">Security</text><rect x="24" y="100" width="217" height="70" class="item2"/><text x="42" y="130" class="h">Firewall</text><text x="42" y="154" class="p">filtering and isolation</text><rect x="24" y="195" width="217" height="70" class="item2"/><text x="42" y="225" class="h">IDS analysis</text><text x="42" y="249" class="p">alerts and metadata</text><rect x="24" y="290" width="217" height="70" class="item2"/><text x="42" y="320" class="h">Scanner</text><text x="42" y="344" class="p">exposure visibility</text></g>
-  <g transform="translate(655 145)"><rect class="col" width="265" height="500"/><rect class="head" width="265" height="68"/><text x="28" y="43" class="headText">Application</text><rect x="24" y="100" width="217" height="70" class="item3"/><text x="42" y="130" class="h">Dashboard</text><text x="42" y="154" class="p">operator overview</text><rect x="24" y="195" width="217" height="70" class="item3"/><text x="42" y="225" class="h">Reports</text><text x="42" y="249" class="p">findings and status</text><rect x="24" y="290" width="217" height="70" class="item3"/><text x="42" y="320" class="h">Workflow</text><text x="42" y="344" class="p">validated changes</text></g>
-  <g transform="translate(955 145)"><rect class="col" width="265" height="500"/><rect class="head" width="265" height="68"/><text x="28" y="43" class="headText">Intelligence</text><rect x="24" y="100" width="217" height="70" class="item4"/><text x="42" y="130" class="h">Knowledge base</text><text x="42" y="154" class="p">docs and procedures</text><rect x="24" y="195" width="217" height="70" class="item4"/><text x="42" y="225" class="h">Assistant</text><text x="42" y="249" class="p">explanations</text><rect x="24" y="290" width="217" height="70" class="item4"/><text x="42" y="320" class="h">Audit helper</text><text x="42" y="344" class="p">evidence reading</text></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security - technology map</title>
+  <desc id="desc">Report-style technology map with platform, security, application, evidence, and assistant roles.</desc>
+  <defs><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0a2a52" flood-opacity=".09"/></filter><style>.bg{fill:#fff}.title{font:800 36px Arial;fill:#0b2d63}.note{font:italic 23px Arial;fill:#0b2d63}.lane{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.1;rx:22;filter:url(#s)}.laneG{fill:#fbfffc;stroke:#087532;stroke-width:2.1;rx:22;filter:url(#s)}.box{fill:#fff;stroke:#cbd6df;stroke-width:1.5;rx:14}.headB{font:800 25px Arial;fill:#0b56e5}.headG{font:800 25px Arial;fill:#087532}.txt{font:600 18px Arial;fill:#1d2633}.small{font:500 15px Arial;fill:#4b5968}</style></defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text x="80" y="80" class="title">Technology role map</text><text x="80" y="118" class="note">Public view of the main component families and their responsibility</text>
+  <rect x="80" y="170" width="690" height="270" class="lane"/>
+  <text x="120" y="220" class="headB">Platform and runtime</text>
+  <rect x="120" y="255" width="190" height="72" class="box"/><text x="155" y="287" class="txt">Linux OS</text><text x="155" y="313" class="small">system base</text>
+  <rect x="335" y="255" width="190" height="72" class="box"/><text x="365" y="287" class="txt">Service units</text><text x="365" y="313" class="small">runtime control</text>
+  <rect x="550" y="255" width="180" height="72" class="box"/><text x="582" y="287" class="txt">Storage</text><text x="582" y="313" class="small">local retention</text>
+  <rect x="120" y="345" width="610" height="55" class="box"/><text x="155" y="380" class="txt">Network interfaces, scheduled collection, secure administration</text>
+  <rect x="830" y="170" width="690" height="270" class="laneG"/>
+  <text x="870" y="220" class="headG">Security services</text>
+  <rect x="870" y="255" width="190" height="72" class="box"/><text x="910" y="287" class="txt">Firewall</text><text x="910" y="313" class="small">filtering</text>
+  <rect x="1085" y="255" width="190" height="72" class="box"/><text x="1128" y="287" class="txt">IDS</text><text x="1128" y="313" class="small">alerting</text>
+  <rect x="1300" y="255" width="180" height="72" class="box"/><text x="1330" y="287" class="txt">Scanner</text><text x="1330" y="313" class="small">exposure</text>
+  <rect x="870" y="345" width="610" height="55" class="box"/><text x="905" y="380" class="txt">Session metadata, blocked flows, asset discovery, CVE context</text>
+  <rect x="80" y="500" width="690" height="270" class="laneG"/>
+  <text x="120" y="550" class="headG">Application and evidence</text>
+  <rect x="120" y="585" width="190" height="72" class="box"/><text x="153" y="617" class="txt">Dashboard</text><text x="153" y="643" class="small">supervision</text>
+  <rect x="335" y="585" width="190" height="72" class="box"/><text x="372" y="617" class="txt">Reports</text><text x="372" y="643" class="small">exported view</text>
+  <rect x="550" y="585" width="180" height="72" class="box"/><text x="585" y="617" class="txt">Ledger</text><text x="585" y="643" class="small">signed proof</text>
+  <rect x="120" y="675" width="610" height="55" class="box"/><text x="155" y="710" class="txt">Event normalization, risk scoring, audit trail, verification status</text>
+  <rect x="830" y="500" width="690" height="270" class="lane"/>
+  <text x="870" y="550" class="headB">Assistant and knowledge</text>
+  <rect x="870" y="585" width="190" height="72" class="box"/><text x="900" y="617" class="txt">Documents</text><text x="900" y="643" class="small">project context</text>
+  <rect x="1085" y="585" width="190" height="72" class="box"/><text x="1125" y="617" class="txt">Retrieval</text><text x="1125" y="643" class="small">relevant facts</text>
+  <rect x="1300" y="585" width="180" height="72" class="box"/><text x="1330" y="617" class="txt">LLM</text><text x="1330" y="643" class="small">explanation</text>
+  <rect x="870" y="675" width="610" height="55" class="box"/><text x="905" y="710" class="txt">Answers, summaries, diagnostic help, human-validated guidance</text>
 </svg>

@@ -1,16 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
-  <title id="title">Ova Security log integrity workflow</title>
-  <desc id="desc">Workflow for collecting, rotating, compressing, chaining, signing, and verifying security logs.</desc>
-  <defs><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2340" flood-opacity=".12"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0b355d"/></marker><style>.bg{fill:#f7fbfd}.title{font:800 34px Arial;fill:#082847}.k{font:700 16px Arial;fill:#008b96;letter-spacing:2px}.step{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:16;filter:url(#shadow)}.secure{fill:#f4f0ff;stroke:#7452c7}.ok{fill:#f2fbf5;stroke:#2aa865}.h{font:800 20px Arial;fill:#082847}.p{font:500 14px Arial;fill:#566779}.line{stroke:#0b355d;stroke-width:2.8;fill:none;marker-end:url(#arrow)}.num{font:900 18px Arial;fill:#0097a7}</style></defs>
-  <rect class="bg" width="1280" height="720"/>
-  <text x="55" y="60" class="k">LOG INTEGRITY</text><text x="55" y="102" class="title">Lightweight storage with tamper-evident proof</text>
-  <g transform="translate(60 175)"><rect class="step" width="180" height="120"/><text x="24" y="38" class="num">01</text><text x="24" y="72" class="h">Collect</text><text x="24" y="98" class="p">security and system logs</text></g>
-  <g transform="translate(280 175)"><rect class="step" width="180" height="120"/><text x="24" y="38" class="num">02</text><text x="24" y="72" class="h">Rotate</text><text x="24" y="98" class="p">split into periods</text></g>
-  <g transform="translate(500 175)"><rect class="step" width="180" height="120"/><text x="24" y="38" class="num">03</text><text x="24" y="72" class="h">Compress</text><text x="24" y="98" class="p">reduce disk usage</text></g>
-  <g transform="translate(720 175)"><rect class="step secure" width="180" height="120"/><text x="24" y="38" class="num">04</text><text x="24" y="72" class="h">Hash</text><text x="24" y="98" class="p">fingerprint each event</text></g>
-  <g transform="translate(940 175)"><rect class="step secure" width="180" height="120"/><text x="24" y="38" class="num">05</text><text x="24" y="72" class="h">Sign</text><text x="24" y="98" class="p">approve the ledger</text></g>
-  <path class="line" d="M240 235h40"/><path class="line" d="M460 235h40"/><path class="line" d="M680 235h40"/><path class="line" d="M900 235h40"/>
-  <rect x="150" y="410" width="980" height="150" class="step ok"/>
-  <text x="205" y="462" class="h">Verification result</text><text x="205" y="497" class="p">A valid chain proves that records were not silently modified after signing.</text><text x="205" y="527" class="p">A broken hash, broken link, or invalid signature triggers an integrity alert.</text>
-  <path class="line" d="M1030 295 C1030 360 640 360 640 410"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security - log integrity workflow</title>
+  <desc id="desc">Log lifecycle and signed ledger workflow in report style.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M0 0 10 5 0 10z" fill="#1254d8"/></marker><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0a2a52" flood-opacity=".09"/></filter><style>.bg{fill:#fff}.title{font:800 36px Arial;fill:#0b2d63}.sub{font:italic 23px Arial;fill:#0b2d63}.panel{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.1;rx:22;filter:url(#s)}.panelG{fill:#fbfffc;stroke:#087532;stroke-width:2.1;rx:22;filter:url(#s)}.box{fill:#fff;stroke:#c8d5df;stroke-width:1.5;rx:14}.boxG{fill:#f5fff8;stroke:#afd0bb;stroke-width:1.5;rx:14}.hB{font:800 24px Arial;fill:#0b56e5}.hG{font:800 24px Arial;fill:#087532}.txt{font:600 17px Arial;fill:#1d2633}.small{font:500 15px Arial;fill:#526171}.arrow{stroke:#1254d8;stroke-width:5;fill:none;marker-end:url(#a)}.dash{stroke:#1254d8;stroke-width:4;stroke-dasharray:8 8;fill:none;marker-end:url(#a)}</style></defs>
+  <rect class="bg" width="1600" height="1000"/>
+  <text x="70" y="78" class="title">Log management and integrity register</text><text x="70" y="116" class="sub">Reduce volume without losing traceability or proof</text>
+  <rect x="60" y="180" width="360" height="640" class="panel"/>
+  <text x="135" y="230" class="hB">Log sources</text>
+  <rect x="100" y="285" width="280" height="78" class="box"/><text x="145" y="325" class="txt">Network alerts</text><text x="145" y="350" class="small">detection events</text>
+  <rect x="100" y="395" width="280" height="78" class="box"/><text x="145" y="435" class="txt">Traffic metadata</text><text x="145" y="460" class="small">flows and protocols</text>
+  <rect x="100" y="505" width="280" height="78" class="box"/><text x="145" y="545" class="txt">System services</text><text x="145" y="570" class="small">runtime state</text>
+  <rect x="100" y="615" width="280" height="78" class="box"/><text x="145" y="655" class="txt">Admin actions</text><text x="145" y="680" class="small">sensitive changes</text>
+  <rect x="530" y="180" width="360" height="640" class="panelG"/>
+  <text x="610" y="230" class="hG">Lifecycle</text>
+  <rect x="575" y="285" width="270" height="70" class="boxG"/><text x="650" y="328" class="txt">Collect</text>
+  <rect x="575" y="390" width="270" height="70" class="boxG"/><text x="650" y="433" class="txt">Rotate</text>
+  <rect x="575" y="495" width="270" height="70" class="boxG"/><text x="625" y="538" class="txt">Compress</text>
+  <rect x="575" y="600" width="270" height="70" class="boxG"/><text x="640" y="643" class="txt">Retain</text>
+  <path class="arrow" d="M710 355v35"/><path class="arrow" d="M710 460v35"/><path class="arrow" d="M710 565v35"/>
+  <rect x="1000" y="180" width="520" height="640" class="panel"/>
+  <text x="1150" y="230" class="hB">Traceability</text>
+  <rect x="1055" y="285" width="410" height="70" class="box"/><text x="1120" y="328" class="txt">Hash each important event</text>
+  <rect x="1055" y="405" width="410" height="70" class="box"/><text x="1120" y="448" class="txt">Chain previous and current hash</text>
+  <rect x="1055" y="525" width="410" height="70" class="box"/><text x="1120" y="568" class="txt">Sign the local ledger</text>
+  <rect x="1055" y="645" width="410" height="70" class="boxG"/><text x="1120" y="688" class="txt">Verify integrity during audit</text>
+  <path class="arrow" d="M420 490h110"/><path class="arrow" d="M890 490h110"/><path class="dash" d="M710 670 C710 900 1260 900 1260 715"/>
+  <text x="1075" y="875" class="sub">If a record is modified, the hash chain breaks and the alteration becomes visible.</text>
 </svg>

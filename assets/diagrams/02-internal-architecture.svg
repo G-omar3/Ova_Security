@@ -1,20 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
-  <title id="title">Ova Security internal architecture</title>
-  <desc id="desc">Layered architecture from hardware and OS to security services, application services, evidence, and assistant layer.</desc>
-  <defs><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2340" flood-opacity=".12"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0b355d"/></marker><style>.bg{fill:#f7fbfd}.title{font:800 34px Arial;fill:#082847}.k{font:700 16px Arial;fill:#008b96;letter-spacing:2px}.band{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:20;filter:url(#shadow)}.node{fill:#f3f8fb;stroke:#bcd2e2;stroke-width:2;rx:14}.core{fill:#e9fbfb;stroke:#0097a7}.evidence{fill:#f2fbf5;stroke:#2aa865}.ai{fill:#f4f0ff;stroke:#7452c7}.h{font:800 21px Arial;fill:#082847}.p{font:500 15px Arial;fill:#566779}.line{stroke:#0b355d;stroke-width:2.6;fill:none;marker-end:url(#arrow)}</style></defs>
-  <rect class="bg" width="1280" height="760"/>
-  <text x="55" y="62" class="k">INTERNAL ARCHITECTURE</text><text x="55" y="105" class="title">A layered appliance, not a loose tool stack</text>
-  <rect x="70" y="145" width="1140" height="105" class="band"/>
-  <text x="105" y="190" class="h">Hardware and operating system</text><text x="105" y="222" class="p">Compact edge device, network interfaces, local storage, service supervision, scheduled tasks.</text>
-  <rect x="70" y="292" width="1140" height="150" class="band"/>
-  <text x="105" y="332" class="h">Network security services</text>
-  <rect x="110" y="360" width="220" height="48" class="node core"/><text x="142" y="391" class="h">Firewall</text>
-  <rect x="375" y="360" width="220" height="48" class="node core"/><text x="415" y="391" class="h">Detection</text>
-  <rect x="640" y="360" width="220" height="48" class="node core"/><text x="680" y="391" class="h">Mapping</text>
-  <rect x="905" y="360" width="250" height="48" class="node core"/><text x="942" y="391" class="h">Vulnerability view</text>
-  <rect x="70" y="485" width="1140" height="115" class="band"/>
-  <text x="105" y="528" class="h">Application services</text><text x="105" y="560" class="p">Dashboard, reports, search, configuration workflow, role-based operations, and event normalization.</text>
-  <rect x="70" y="635" width="540" height="80" class="band evidence"/><text x="105" y="683" class="h">Signed evidence register</text>
-  <rect x="670" y="635" width="540" height="80" class="band ai"/><text x="705" y="683" class="h">Assistant and knowledge layer</text>
-  <path class="line" d="M640 250v42"/><path class="line" d="M640 442v43"/><path class="line" d="M520 600v35"/><path class="line" d="M760 600v35"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security - internal architecture</title>
+  <desc id="desc">Layered internal architecture inspired by the technical report design.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" orient="auto"><path d="M0 0 10 5 0 10z" fill="#1254d8"/></marker><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0a2a52" flood-opacity=".09"/></filter><style>.bg{fill:#fff}.title{font:800 36px Arial;fill:#0b2d63}.sub{font:italic 24px Arial;fill:#0b2d63}.group{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.2;rx:22;filter:url(#s)}.groupG{fill:#fbfffc;stroke:#087532;stroke-width:2.2;rx:22;filter:url(#s)}.box{fill:#fff;stroke:#c8d5df;stroke-width:1.6;rx:14}.boxG{fill:#f6fff8;stroke:#b7d2bf;stroke-width:1.6;rx:14}.hB{font:800 23px Arial;fill:#0b56e5}.hG{font:800 23px Arial;fill:#087532}.txt{font:500 17px Arial;fill:#1d2633}.line{stroke:#1254d8;stroke-width:4;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" width="1600" height="980"/>
+  <text x="80" y="80" class="title">Ova Security internal logical architecture</text>
+  <text x="80" y="120" class="sub">From appliance runtime to security orchestration, supervision, evidence, and assistance</text>
+  <rect x="170" y="170" width="1260" height="120" class="group"/>
+  <text x="220" y="220" class="hB">Appliance platform</text><text x="220" y="255" class="txt">Hardware, Linux runtime, network interfaces, local storage, service supervision, scheduled jobs</text>
+  <rect x="170" y="350" width="1260" height="190" class="groupG"/>
+  <text x="220" y="400" class="hG">Security services</text>
+  <rect x="225" y="440" width="250" height="65" class="box"/><text x="270" y="480" class="txt">Firewall filtering</text>
+  <rect x="515" y="440" width="250" height="65" class="box"/><text x="565" y="480" class="txt">Intrusion detection</text>
+  <rect x="805" y="440" width="250" height="65" class="box"/><text x="852" y="480" class="txt">Traffic analysis</text>
+  <rect x="1095" y="440" width="250" height="65" class="box"/><text x="1130" y="480" class="txt">Vulnerability view</text>
+  <rect x="170" y="600" width="1260" height="190" class="group"/>
+  <text x="220" y="650" class="hB">Application services</text>
+  <rect x="225" y="690" width="210" height="65" class="boxG"/><text x="280" y="730" class="txt">Dashboard</text>
+  <rect x="470" y="690" width="210" height="65" class="boxG"/><text x="527" y="730" class="txt">Reports</text>
+  <rect x="715" y="690" width="210" height="65" class="boxG"/><text x="748" y="730" class="txt">Rule workflow</text>
+  <rect x="960" y="690" width="210" height="65" class="boxG"/><text x="1005" y="730" class="txt">Risk engine</text>
+  <rect x="1205" y="690" width="160" height="65" class="boxG"/><text x="1240" y="730" class="txt">Search</text>
+  <rect x="170" y="850" width="580" height="80" class="groupG"/><text x="230" y="900" class="hG">Signed evidence register</text>
+  <rect x="850" y="850" width="580" height="80" class="group"/><text x="940" y="900" class="hB">Assistant and knowledge layer</text>
+  <path class="line" d="M800 290v60"/><path class="line" d="M800 540v60"/><path class="line" d="M620 790v60"/><path class="line" d="M980 790v60"/>
 </svg>

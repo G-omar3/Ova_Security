@@ -1,16 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
-  <title id="title">Ova Security operational lifecycle</title>
-  <desc id="desc">Operational lifecycle showing observe, correlate, prioritize, decide, enforce, and prove.</desc>
-  <defs><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2340" flood-opacity=".12"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0b355d"/></marker><style>.bg{fill:#f7fbfd}.title{font:800 34px Arial;fill:#082847}.k{font:700 16px Arial;fill:#008b96;letter-spacing:2px}.node{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:22;filter:url(#shadow)}.h{font:800 22px Arial;fill:#082847}.p{font:500 14px Arial;fill:#566779}.line{stroke:#0b355d;stroke-width:2.8;fill:none;marker-end:url(#arrow)}.accent{fill:#0097a7}</style></defs>
-  <rect class="bg" width="1280" height="720"/>
-  <text x="55" y="60" class="k">OPERATIONAL LIFECYCLE</text><text x="55" y="102" class="title">A repeatable cycle for security operations</text>
-  <circle cx="640" cy="380" r="155" fill="#e9fbfb" stroke="#0097a7" stroke-width="3"/>
-  <text x="570" y="365" class="h">Ova Security</text><text x="535" y="397" class="p">edge appliance workflow</text>
-  <g transform="translate(100 170)"><rect class="node" width="210" height="92"/><circle cx="36" cy="46" r="10" class="accent"/><text x="62" y="42" class="h">Observe</text><text x="62" y="66" class="p">collect signals</text></g>
-  <g transform="translate(535 115)"><rect class="node" width="210" height="92"/><circle cx="36" cy="46" r="10" class="accent"/><text x="62" y="42" class="h">Correlate</text><text x="62" y="66" class="p">link to assets</text></g>
-  <g transform="translate(970 170)"><rect class="node" width="210" height="92"/><circle cx="36" cy="46" r="10" class="accent"/><text x="62" y="42" class="h">Prioritize</text><text x="62" y="66" class="p">rank risk</text></g>
-  <g transform="translate(970 500)"><rect class="node" width="210" height="92"/><circle cx="36" cy="46" r="10" class="accent"/><text x="62" y="42" class="h">Decide</text><text x="62" y="66" class="p">operator approval</text></g>
-  <g transform="translate(535 555)"><rect class="node" width="210" height="92"/><circle cx="36" cy="46" r="10" class="accent"/><text x="62" y="42" class="h">Enforce</text><text x="62" y="66" class="p">apply changes</text></g>
-  <g transform="translate(100 500)"><rect class="node" width="210" height="92"/><circle cx="36" cy="46" r="10" class="accent"/><text x="62" y="42" class="h">Prove</text><text x="62" y="66" class="p">sign evidence</text></g>
-  <path class="line" d="M310 216 C415 165 480 160 535 161"/><path class="line" d="M745 161 C840 160 900 176 970 216"/><path class="line" d="M1075 262 C1110 340 1110 420 1075 500"/><path class="line" d="M970 546 C865 600 805 603 745 601"/><path class="line" d="M535 601 C435 600 370 580 310 546"/><path class="line" d="M205 500 C168 420 168 340 205 262"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security - operational lifecycle sequence</title>
+  <desc id="desc">Sequence-style operational lifecycle inspired by the report sequence diagram.</desc>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0 0 10 5 0 10z" fill="#111"/></marker><style>.bg{fill:#fff}.box{fill:#fff;stroke:#111;stroke-width:2;rx:8}.head{font:800 18px Arial;fill:#111}.txt{font:600 16px Arial;fill:#111}.life{stroke:#111;stroke-width:1.8;stroke-dasharray:8 8}.call{stroke:#111;stroke-width:2.2;fill:none;marker-end:url(#a)}.return{stroke:#111;stroke-width:2;fill:none;marker-end:url(#a)}.title{font:800 34px Arial;fill:#0b2d63}.sub{font:italic 22px Arial;fill:#0b2d63}</style></defs>
+  <rect class="bg" width="1600" height="900"/>
+  <text x="70" y="70" class="title">Operational lifecycle</text><text x="70" y="108" class="sub">From observation to validated action and signed evidence</text>
+  <g transform="translate(70 150)"><rect class="box" width="150" height="60"/><text x="28" y="38" class="head">Operator</text><path class="life" d="M75 60v650"/></g>
+  <g transform="translate(300 150)"><rect class="box" width="170" height="60"/><text x="35" y="38" class="head">Dashboard</text><path class="life" d="M85 60v650"/></g>
+  <g transform="translate(560 150)"><rect class="box" width="180" height="60"/><text x="35" y="38" class="head">Backend API</text><path class="life" d="M90 60v650"/></g>
+  <g transform="translate(840 150)"><rect class="box" width="180" height="60"/><text x="30" y="38" class="head">Detection</text><path class="life" d="M90 60v650"/></g>
+  <g transform="translate(1110 150)"><rect class="box" width="180" height="60"/><text x="38" y="38" class="head">Firewall</text><path class="life" d="M90 60v650"/></g>
+  <g transform="translate(1370 150)"><rect class="box" width="170" height="60"/><text x="35" y="38" class="head">Ledger</text><path class="life" d="M85 60v650"/></g>
+  <path class="call" d="M145 265h240"/><text x="170" y="250" class="txt">1. Check network state</text>
+  <path class="call" d="M385 330h265"/><text x="420" y="315" class="txt">2. Request events</text>
+  <path class="call" d="M650 395h280"/><text x="690" y="380" class="txt">3. Collect alerts and logs</text>
+  <path class="return" d="M930 450H650"/><text x="700" y="435" class="txt">4. Return context</text>
+  <path class="call" d="M650 515h550"/><text x="745" y="500" class="txt">5. Validate defensive decision</text>
+  <path class="return" d="M1200 570H650"/><text x="800" y="555" class="txt">6. Confirmation</text>
+  <path class="call" d="M650 635h805"/><text x="825" y="620" class="txt">7. Write signed evidence</text>
+  <path class="return" d="M1455 700H385"/><text x="720" y="685" class="txt">8. Incident status updated</text>
+  <path class="return" d="M385 760H145"/><text x="180" y="745" class="txt">9. Action visible to operator</text>
 </svg>

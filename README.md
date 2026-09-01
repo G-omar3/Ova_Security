@@ -11,6 +11,8 @@ This repository presents the architecture at a public level. It does not contain
 - [Internal architecture](#internal-architecture)
 - [Functional modules](#functional-modules)
 - [Technology role map](#technology-role-map)
+- [How the system works](#how-the-system-works)
+- [Technology details](#technology-details)
 - [Data and evidence model](#data-and-evidence-model)
 - [Log integrity and auditability](#log-integrity-and-auditability)
 - [Assistant and knowledge layer](#assistant-and-knowledge-layer)
@@ -90,6 +92,40 @@ The implementation can rely on well-known open-source components while keeping t
 | Web application | Dashboard, reports, search, administration, and operator workflows. |
 | Local evidence store | Stores signed records, log metadata, configuration changes, and audit history. |
 | Assistant layer | Uses project documentation and local events to answer operational questions. |
+
+## How the system works
+
+Ova Security works as a controlled chain. Each component produces data for the next one, and sensitive actions are kept visible to the operator.
+
+1. **Traffic enters the appliance** from the upstream network interface.
+2. **The firewall layer applies the active policy** and separates unauthorized traffic from allowed traffic.
+3. **Detection and traffic analysis services observe events** such as suspicious flows, protocol activity, service exposure, and abnormal behavior.
+4. **The backend normalizes events** into a common structure: source, destination, service, severity, timestamp, affected asset, and action status.
+5. **The risk layer correlates events** with assets, vulnerabilities, previous alerts, and operational context.
+6. **The dashboard presents the situation** through equipment status, alerts, service health, reports, and audit views.
+7. **The operator validates sensitive changes**, such as blocking decisions, exceptions, remediation status, or administrative actions.
+8. **The evidence layer records important actions** with hashing, chaining, signing, and verification.
+9. **The assistant helps explain the context** using indexed documentation, reports, logs, and known procedures, while final decisions remain human-controlled.
+
+This creates a defensive loop: **observe -> correlate -> decide -> enforce -> prove**.
+
+## Technology details
+
+The technologies below are described by role, not by private configuration. The repository explains how they cooperate inside the architecture without publishing deployable secrets or internal rules.
+
+| Technology / block | Role in Ova Security | Input | Output | Integration logic |
+| --- | --- | --- | --- | --- |
+| Linux appliance runtime | Hosts the complete local platform and supervises services. | Boot process, network interfaces, service definitions. | Running security and application services. | Provides the stable base for scheduled jobs, local storage, permissions, and service recovery. |
+| Firewall engine | Enforces the network security policy. | Validated rules, blocked IP decisions, interface zones. | Allowed traffic, refused traffic, rule state. | Receives controlled decisions from the backend and applies them at the network edge. |
+| Intrusion detection service | Detects suspicious network behavior. | Mirrored or routed traffic metadata. | Alerts with severity, signature, source, destination, and protocol context. | Feeds the event pipeline and gives the dashboard actionable incident data. |
+| Traffic analysis service | Builds visibility on conversations and services. | Network sessions, DNS activity, protocol metadata. | Flow history, service map, communication context. | Helps distinguish normal activity from suspicious activity and supports asset mapping. |
+| Vulnerability scanner | Identifies exposed services and known weaknesses on selected assets. | Asset inventory, selected targets, scan policy. | Findings, severity, affected service, remediation status. | Links vulnerability information to the dashboard and risk prioritization layer. |
+| Backend API | Coordinates data collection, business logic, and dashboard access. | Alerts, logs, assets, scanner results, operator actions. | Normalized records, risk scores, reports, commands. | Acts as the orchestration layer between sensors, storage, evidence, UI, and assistant. |
+| Risk and correlation engine | Converts raw findings into prioritized operational context. | Alerts, asset data, vulnerability data, service status. | Incident priority, affected scope, recommended next step. | Reduces noise by connecting events to the real network context. |
+| Web dashboard | Gives operators one place to understand and control the appliance. | API data, reports, health metrics, audit status. | Visual supervision, validated actions, exports. | Presents the system as one product instead of separate technical tools. |
+| Log lifecycle manager | Keeps logs useful without saturating local storage. | Raw logs, generated events, retention policy. | Rotated archives, compressed history, searchable active data. | Maintains operational visibility while controlling disk usage. |
+| Signed ledger | Preserves proof of sensitive events. | Important events, hashes, previous record reference, signature material. | Tamper-evident audit chain. | Makes later alteration detectable by checking hash continuity and signature validity. |
+| Assistant / RAG layer | Helps operators understand incidents and procedures. | User questions, indexed documentation, selected events, reports. | Explanation, summary, diagnostic checklist, suggested response. | Retrieves relevant local context before generating an answer, then leaves critical validation to the operator. |
 
 ## Data and evidence model
 

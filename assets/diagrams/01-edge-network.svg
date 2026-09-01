@@ -5,10 +5,11 @@
     <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#1254d8"/></marker>
     <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0a2a52" flood-opacity=".10"/></filter>
     <style>
-      .bg{fill:#ffffff}.panel{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.2;rx:22;filter:url(#softShadow)}.panelGreen{fill:#fbfffc;stroke:#0b7a34;stroke-width:2.2;rx:22;filter:url(#softShadow)}.inner{fill:#ffffff;stroke:#c8d5df;stroke-width:1.6;rx:14}.innerGreen{fill:#f8fffa;stroke:#afcdb9;stroke-width:1.6;rx:14}.titleBlue{font:800 28px Arial;fill:#0b56e5}.titleGreen{font:800 30px Arial;fill:#087532}.section{font:800 22px Arial;fill:#087532}.txt{font:500 17px Arial;fill:#1d2633}.small{font:500 15px Arial;fill:#4b5968}.caption{font:italic 18px Arial;fill:#4b5968}.arrow{stroke:#1254d8;stroke-width:7;fill:none;marker-end:url(#arrowBlue)}.arrowThin{stroke:#1254d8;stroke-width:3;fill:none;marker-end:url(#arrowBlue)}.icon{font:800 34px Arial;fill:#0b56e5}.bottom{fill:#ffffff;stroke:#d6e0ea;stroke-width:1.8;rx:18}
+      .bg{fill:#ffffff}.frame{fill:none;stroke:#d6e0ea;stroke-width:2.4;rx:26}.panel{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.2;rx:22;filter:url(#softShadow)}.panelGreen{fill:#fbfffc;stroke:#0b7a34;stroke-width:2.2;rx:22;filter:url(#softShadow)}.inner{fill:#ffffff;stroke:#c8d5df;stroke-width:1.6;rx:14}.innerGreen{fill:#f8fffa;stroke:#afcdb9;stroke-width:1.6;rx:14}.titleBlue{font:800 28px Arial;fill:#0b56e5}.titleGreen{font:800 30px Arial;fill:#087532}.section{font:800 22px Arial;fill:#087532}.txt{font:500 17px Arial;fill:#1d2633}.small{font:500 15px Arial;fill:#4b5968}.caption{font:italic 18px Arial;fill:#4b5968}.arrow{stroke:#1254d8;stroke-width:7;fill:none;marker-end:url(#arrowBlue)}.arrowThin{stroke:#1254d8;stroke-width:3;fill:none;marker-end:url(#arrowBlue)}.icon{font:800 34px Arial;fill:#0b56e5}.bottom{fill:#ffffff;stroke:#d6e0ea;stroke-width:1.8;rx:18}
     </style>
   </defs>
   <rect class="bg" width="1600" height="1050"/>
+  <rect x="24" y="24" width="1552" height="1002" class="frame"/>
   <rect x="40" y="190" width="300" height="700" class="panel"/>
   <text x="85" y="240" class="titleBlue">Sources &amp; local network</text>
   <rect x="70" y="285" width="240" height="92" class="inner"/><text x="95" y="340" class="icon">NET</text><text x="170" y="333" class="txt">Network traffic</text>

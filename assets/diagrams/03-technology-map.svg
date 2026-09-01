@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
   <title id="title">Ova Security - technology map</title>
   <desc id="desc">Report-style technology map with platform, security, application, evidence, and assistant roles.</desc>
-  <defs><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0a2a52" flood-opacity=".09"/></filter><style>.bg{fill:#fff}.title{font:800 36px Arial;fill:#0b2d63}.note{font:italic 23px Arial;fill:#0b2d63}.lane{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.1;rx:22;filter:url(#s)}.laneG{fill:#fbfffc;stroke:#087532;stroke-width:2.1;rx:22;filter:url(#s)}.box{fill:#fff;stroke:#cbd6df;stroke-width:1.5;rx:14}.headB{font:800 25px Arial;fill:#0b56e5}.headG{font:800 25px Arial;fill:#087532}.txt{font:600 18px Arial;fill:#1d2633}.small{font:500 15px Arial;fill:#4b5968}</style></defs>
+  <defs><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0a2a52" flood-opacity=".09"/></filter><style>.bg{fill:#fff}.frame{fill:none;stroke:#d6e0ea;stroke-width:2.4;rx:26}.title{font:800 36px Arial;fill:#0b2d63}.note{font:italic 23px Arial;fill:#0b2d63}.lane{fill:#fbfdff;stroke:#0b56e5;stroke-width:2.1;rx:22;filter:url(#s)}.laneG{fill:#fbfffc;stroke:#087532;stroke-width:2.1;rx:22;filter:url(#s)}.box{fill:#fff;stroke:#cbd6df;stroke-width:1.5;rx:14}.headB{font:800 25px Arial;fill:#0b56e5}.headG{font:800 25px Arial;fill:#087532}.txt{font:600 18px Arial;fill:#1d2633}.small{font:500 15px Arial;fill:#4b5968}</style></defs>
   <rect class="bg" width="1600" height="900"/>
+  <rect x="24" y="24" width="1552" height="852" class="frame"/>
   <text x="80" y="80" class="title">Technology role map</text><text x="80" y="118" class="note">Public view of the main component families and their responsibility</text>
   <rect x="80" y="170" width="690" height="270" class="lane"/>
   <text x="120" y="220" class="headB">Platform and runtime</text>

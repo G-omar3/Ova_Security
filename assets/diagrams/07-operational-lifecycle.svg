@@ -1,8 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
   <title id="title">Ova Security - operational lifecycle sequence</title>
   <desc id="desc">Sequence-style operational lifecycle inspired by the report sequence diagram.</desc>
-  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0 0 10 5 0 10z" fill="#111"/></marker><style>.bg{fill:#fff}.box{fill:#fff;stroke:#111;stroke-width:2;rx:8}.head{font:800 18px Arial;fill:#111}.txt{font:600 16px Arial;fill:#111}.life{stroke:#111;stroke-width:1.8;stroke-dasharray:8 8}.call{stroke:#111;stroke-width:2.2;fill:none;marker-end:url(#a)}.return{stroke:#111;stroke-width:2;fill:none;marker-end:url(#a)}.title{font:800 34px Arial;fill:#0b2d63}.sub{font:italic 22px Arial;fill:#0b2d63}</style></defs>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" orient="auto"><path d="M0 0 10 5 0 10z" fill="#111"/></marker><style>.bg{fill:#fff}.frame{fill:none;stroke:#d6e0ea;stroke-width:2.4;rx:26}.box{fill:#fff;stroke:#111;stroke-width:2;rx:8}.head{font:800 18px Arial;fill:#111}.txt{font:600 16px Arial;fill:#111}.life{stroke:#111;stroke-width:1.8;stroke-dasharray:8 8}.call{stroke:#111;stroke-width:2.2;fill:none;marker-end:url(#a)}.return{stroke:#111;stroke-width:2;fill:none;marker-end:url(#a)}.title{font:800 34px Arial;fill:#0b2d63}.sub{font:italic 22px Arial;fill:#0b2d63}</style></defs>
   <rect class="bg" width="1600" height="900"/>
+  <rect x="24" y="24" width="1552" height="852" class="frame"/>
   <text x="70" y="70" class="title">Operational lifecycle</text><text x="70" y="108" class="sub">From observation to validated action and signed evidence</text>
   <g transform="translate(70 150)"><rect class="box" width="150" height="60"/><text x="28" y="38" class="head">Operator</text><path class="life" d="M75 60v650"/></g>
   <g transform="translate(300 150)"><rect class="box" width="170" height="60"/><text x="35" y="38" class="head">Dashboard</text><path class="life" d="M85 60v650"/></g>

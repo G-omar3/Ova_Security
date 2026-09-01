@@ -16,6 +16,7 @@ This repository presents the architecture at a public level. It does not contain
 - [Data and evidence model](#data-and-evidence-model)
 - [Log integrity and auditability](#log-integrity-and-auditability)
 - [Assistant and knowledge layer](#assistant-and-knowledge-layer)
+- [Resilience mode](#resilience-mode)
 - [Operational lifecycle](#operational-lifecycle)
 - [Security boundaries](#security-boundaries)
 - [License](#license)
@@ -231,6 +232,23 @@ The assistant is not a replacement for the operator. It is a support layer that 
 | Alert explanation | Events are translated into understandable risk context. |
 | Action guidance | The assistant proposes next steps, checks, and remediation paths. |
 | Human validation | Sensitive actions remain under operator control. |
+
+## Resilience mode
+
+Ova Security includes a degraded-mode logic for situations where a service becomes unavailable, the system detects an anomaly, or the appliance must keep a minimal defensive posture while recovering.
+
+![Ova Security resilience mode cycle](assets/diagrams/06-resilience-cycle.svg)
+
+The resilience cycle follows six stages:
+
+| Stage | Role |
+| --- | --- |
+| Surveillance | Monitor service health, network state, resource pressure, and appliance behavior. |
+| Anomaly detection | Identify outage, overload, failed service, suspicious condition, or attack symptom. |
+| Mode decision | Decide whether the appliance remains normal, switches to degraded mode, or enters a safe mode. |
+| Minimal protection | Keep essential filtering and local protection active even when advanced services are degraded. |
+| Recovery | Restart, resynchronize, or restore affected services in a controlled way. |
+| Return to normal | Validate restored services and resume standard operation with updated evidence. |
 
 ## Operational lifecycle
 

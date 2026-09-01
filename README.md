@@ -24,6 +24,8 @@ This repository presents the architecture at a public level. It does not contain
 
 Ova Security is positioned as an **edge cyber appliance**: a local box installed between the internet access point and the protected internal network. Its objective is to bring together monitoring, filtering, vulnerability visibility, audit evidence, and operator assistance in one controlled platform.
 
+![Ova Security system architecture](assets/diagrams/01-system-architecture.svg)
+
 The product is built around four principles:
 
 | Principle | Meaning |
@@ -37,7 +39,7 @@ The product is built around four principles:
 
 Ova Security is designed to sit at the edge of the protected network. It receives traffic from the upstream router, applies filtering and inspection, then exposes only validated flows toward internal equipment.
 
-![Ova Security edge network architecture](assets/diagrams/01-edge-network.svg)
+![Ova Security edge network zones](assets/diagrams/02-network-zones.svg)
 
 ### Network zones
 
@@ -52,7 +54,7 @@ Ova Security is designed to sit at the edge of the protected network. It receive
 
 The platform is structured in layers. Each layer has a clear responsibility so the solution can remain understandable, auditable, and maintainable.
 
-![Ova Security internal architecture](assets/diagrams/02-internal-architecture.svg)
+![Ova Security internal architecture](assets/diagrams/03-internal-orchestration.svg)
 
 ### Layer responsibilities
 
@@ -81,7 +83,7 @@ Ova Security is presented as a product, not as a collection of disconnected tool
 
 The implementation can rely on well-known open-source components while keeping the product value in integration, orchestration, presentation, and evidence handling.
 
-![Ova Security technology role map](assets/diagrams/03-technology-map.svg)
+![Ova Security technology role map](assets/diagrams/03-technology-role-map.svg)
 
 | Component family | Public role |
 | --- | --- |
@@ -127,6 +129,52 @@ The technologies below are described by role, not by private configuration. The 
 | Signed ledger | Preserves proof of sensitive events. | Important events, hashes, previous record reference, signature material. | Tamper-evident audit chain. | Makes later alteration detectable by checking hash continuity and signature validity. |
 | Assistant / RAG layer | Helps operators understand incidents and procedures. | User questions, indexed documentation, selected events, reports. | Explanation, summary, diagnostic checklist, suggested response. | Retrieves relevant local context before generating an answer, then leaves critical validation to the operator. |
 
+### Technology diagrams
+
+Each technology block has a focused diagram showing how it receives input, what it does inside the appliance, and what it returns to the rest of the system.
+
+#### Linux appliance runtime
+
+![Linux appliance runtime](assets/diagrams/tech-01-platform-runtime.svg)
+
+The runtime layer starts the appliance services, supervises process state, exposes network interfaces, manages local storage permissions, and runs scheduled collection tasks. It is the base that keeps the product stable even when one service must restart or recover.
+
+#### Firewall engine
+
+![Firewall engine](assets/diagrams/tech-02-firewall-engine.svg)
+
+The firewall engine applies the validated security policy at the network edge. It receives interface zones, operator-approved rules, and block decisions from the backend, then returns rule state, allowed/refused flow information, and auditable change events.
+
+#### Intrusion detection and traffic analysis
+
+![Intrusion detection and traffic analysis](assets/diagrams/tech-03-detection-analysis.svg)
+
+Detection and traffic analysis transform network activity into alerts, protocol metadata, flow history, and investigation context. This layer feeds the correlation engine so the dashboard can show what happened, where it happened, and which asset is affected.
+
+#### Vulnerability visibility
+
+![Vulnerability visibility](assets/diagrams/tech-04-vulnerability-visibility.svg)
+
+The vulnerability layer connects known assets and detected services with security findings. Its role is not only to list weaknesses, but to prioritize them according to exposure, affected service, and operational importance.
+
+#### Backend API and dashboard
+
+![Backend API and dashboard](assets/diagrams/tech-05-backend-dashboard.svg)
+
+The backend API is the coordination point of the product. It normalizes data, stores structured records, prepares dashboard views, manages operator workflows, and sends validated actions toward security services.
+
+#### Signed ledger
+
+![Signed ledger](assets/diagrams/tech-06-signed-ledger.svg)
+
+The signed ledger receives sensitive events, creates a hash, links each record to the previous one, and stores a verifiable proof. If someone modifies an old record, the chain no longer validates.
+
+#### Assistant and RAG layer
+
+![Assistant and RAG layer](assets/diagrams/tech-07-assistant-rag.svg)
+
+The assistant retrieves approved project context before producing an answer. It can explain alerts, summarize reports, and propose diagnostic steps, but it does not silently apply critical changes.
+
 ## Data and evidence model
 
 The architecture separates raw logs, normalized events, operator actions, and signed evidence. This separation makes the platform easier to audit and safer to operate.
@@ -147,7 +195,7 @@ The architecture separates raw logs, normalized events, operator actions, and si
 
 The log strategy has two goals: keep the system lightweight and preserve proof. The appliance should reduce disk usage without destroying the chain of evidence.
 
-![Ova Security log integrity workflow](assets/diagrams/05-log-integrity.svg)
+![Ova Security log integrity workflow](assets/diagrams/tech-06-signed-ledger.svg)
 
 ### Integrity workflow
 
@@ -172,7 +220,7 @@ The log strategy has two goals: keep the system lightweight and preserve proof. 
 
 The assistant is not a replacement for the operator. It is a support layer that helps interpret alerts, explain logs, summarize reports, and propose diagnostic steps from approved project knowledge.
 
-![Ova Security assistant and knowledge architecture](assets/diagrams/06-assistant-layer.svg)
+![Ova Security assistant and knowledge architecture](assets/diagrams/tech-07-assistant-rag.svg)
 
 ### Assistant capabilities
 
@@ -188,7 +236,7 @@ The assistant is not a replacement for the operator. It is a support layer that 
 
 The architecture supports a continuous cycle: observe, understand, decide, act, and prove.
 
-![Ova Security operational lifecycle](assets/diagrams/07-operational-lifecycle.svg)
+![Ova Security operational lifecycle](assets/diagrams/05-operational-sequence.svg)
 
 | Phase | Description |
 | --- | --- |

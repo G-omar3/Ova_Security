@@ -243,7 +243,7 @@ The resilience cycle follows six stages:
 
 | Stage | Role |
 | --- | --- |
-| Surveillance | Monitor service health, network state, resource pressure, and appliance behavior. |
+| Monitoring | Monitor service health, network state, resource pressure, and appliance behavior. |
 | Anomaly detection | Identify outage, overload, failed service, suspicious condition, or attack symptom. |
 | Mode decision | Decide whether the appliance remains normal, switches to degraded mode, or enters a safe mode. |
 | Minimal protection | Keep essential filtering and local protection active even when advanced services are degraded. |

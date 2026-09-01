@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security edge network architecture</title>
+  <desc id="desc">Ova Security between upstream connectivity, protected LAN, and administration access.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0a2340" flood-opacity=".14"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#0b355d"/></marker>
+    <linearGradient id="appliance" x1="0" x2="1"><stop stop-color="#071c33"/><stop offset="1" stop-color="#0e4f5f"/></linearGradient>
+    <style>.bg{fill:#f7fbfd}.card{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:18;filter:url(#shadow)}.zone{font:700 18px Arial;fill:#607184;letter-spacing:1.5px}.h{font:800 28px Arial;fill:#082847}.p{font:500 18px Arial;fill:#546477}.small{font:700 15px Arial;fill:#0b355d}.dark{fill:url(#appliance);stroke:#174a73;stroke-width:2;rx:22}.darkText{font:800 30px Arial;fill:#fff}.pill{fill:#193650;rx:10}.pillText{font:700 17px Arial;fill:#eaf7ff}.ok{fill:#ecf9f1;stroke:#2aa865}.warn{fill:#fff7e8;stroke:#d99a24}.admin{fill:#edf6ff;stroke:#3b7fc0}.line{stroke:#0b355d;stroke-width:3;fill:none;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect class="bg" width="1280" height="720"/>
+  <text x="60" y="62" class="zone">EDGE NETWORK POSITION</text>
+  <text x="60" y="105" class="h">Ova Security placed on the physical path of the network</text>
+  <rect x="70" y="165" width="255" height="155" class="card warn"/>
+  <text x="105" y="220" class="h">Internet</text><text x="105" y="252" class="p">WAN traffic and upstream services</text>
+  <rect x="385" y="165" width="255" height="155" class="card warn"/>
+  <text x="420" y="220" class="h">Router</text><text x="420" y="252" class="p">Access provider equipment</text>
+  <path class="line" d="M325 242h60"/><path class="line" d="M640 242h85"/>
+  <rect x="725" y="120" width="355" height="285" class="dark" filter="url(#shadow)"/>
+  <text x="765" y="178" class="darkText">Ova Security</text>
+  <text x="765" y="210" class="pillText">wired-only edge appliance</text>
+  <rect x="765" y="250" width="130" height="46" class="pill"/><text x="793" y="280" class="pillText">Filter</text>
+  <rect x="915" y="250" width="130" height="46" class="pill"/><text x="944" y="280" class="pillText">Detect</text>
+  <rect x="765" y="315" width="130" height="46" class="pill"/><text x="790" y="345" class="pillText">Audit</text>
+  <rect x="915" y="315" width="130" height="46" class="pill"/><text x="936" y="345" class="pillText">Assist</text>
+  <path class="line" d="M900 405v72"/>
+  <rect x="610" y="505" width="580" height="125" class="card ok"/>
+  <text x="650" y="555" class="h">Protected LAN</text><text x="650" y="588" class="p">Workstations, servers, IoT devices, and internal services</text>
+  <rect x="70" y="465" width="390" height="165" class="card admin"/>
+  <text x="110" y="520" class="h">Administration</text><text x="110" y="553" class="p">Restricted console for operators</text>
+  <path class="line" d="M460 548h135"/>
+  <text x="765" y="455" class="small">validated traffic, logs, evidence, and alerts</text>
+</svg>

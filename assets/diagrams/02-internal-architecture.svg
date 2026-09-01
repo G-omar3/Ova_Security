@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Ova Security internal architecture</title>
+  <desc id="desc">Layered architecture from hardware and OS to security services, application services, evidence, and assistant layer.</desc>
+  <defs><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2340" flood-opacity=".12"/></filter><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" fill="#0b355d"/></marker><style>.bg{fill:#f7fbfd}.title{font:800 34px Arial;fill:#082847}.k{font:700 16px Arial;fill:#008b96;letter-spacing:2px}.band{fill:#fff;stroke:#d8e6f0;stroke-width:2;rx:20;filter:url(#shadow)}.node{fill:#f3f8fb;stroke:#bcd2e2;stroke-width:2;rx:14}.core{fill:#e9fbfb;stroke:#0097a7}.evidence{fill:#f2fbf5;stroke:#2aa865}.ai{fill:#f4f0ff;stroke:#7452c7}.h{font:800 21px Arial;fill:#082847}.p{font:500 15px Arial;fill:#566779}.line{stroke:#0b355d;stroke-width:2.6;fill:none;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" width="1280" height="760"/>
+  <text x="55" y="62" class="k">INTERNAL ARCHITECTURE</text><text x="55" y="105" class="title">A layered appliance, not a loose tool stack</text>
+  <rect x="70" y="145" width="1140" height="105" class="band"/>
+  <text x="105" y="190" class="h">Hardware and operating system</text><text x="105" y="222" class="p">Compact edge device, network interfaces, local storage, service supervision, scheduled tasks.</text>
+  <rect x="70" y="292" width="1140" height="150" class="band"/>
+  <text x="105" y="332" class="h">Network security services</text>
+  <rect x="110" y="360" width="220" height="48" class="node core"/><text x="142" y="391" class="h">Firewall</text>
+  <rect x="375" y="360" width="220" height="48" class="node core"/><text x="415" y="391" class="h">Detection</text>
+  <rect x="640" y="360" width="220" height="48" class="node core"/><text x="680" y="391" class="h">Mapping</text>
+  <rect x="905" y="360" width="250" height="48" class="node core"/><text x="942" y="391" class="h">Vulnerability view</text>
+  <rect x="70" y="485" width="1140" height="115" class="band"/>
+  <text x="105" y="528" class="h">Application services</text><text x="105" y="560" class="p">Dashboard, reports, search, configuration workflow, role-based operations, and event normalization.</text>
+  <rect x="70" y="635" width="540" height="80" class="band evidence"/><text x="105" y="683" class="h">Signed evidence register</text>
+  <rect x="670" y="635" width="540" height="80" class="band ai"/><text x="705" y="683" class="h">Assistant and knowledge layer</text>
+  <path class="line" d="M640 250v42"/><path class="line" d="M640 442v43"/><path class="line" d="M520 600v35"/><path class="line" d="M760 600v35"/>
+</svg>

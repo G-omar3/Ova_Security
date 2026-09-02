@@ -40,7 +40,7 @@ The product is built around four principles:
 
 Ova Security is designed to sit at the edge of the protected network. It receives traffic from the upstream router, applies filtering and inspection, then exposes only validated flows toward internal equipment.
 
-![Ova Security edge network zones](assets/report-diagrams/framed/general-architecture.png)
+![Ova Security edge network zones](assets/report-diagrams/framed/edge-network-zones.png)
 
 ### Network zones
 
@@ -68,6 +68,8 @@ The platform is structured in layers. Each layer has a clear responsibility so t
 
 Ova Security is presented as a product, not as a collection of disconnected tools. The modules below form one operational chain.
 
+![Ova Security public edge capabilities](assets/report-diagrams/framed/public-edge-capabilities.png)
+
 | Module | Purpose | Typical output |
 | --- | --- | --- |
 | Firewall control | Blocks unauthorized inbound or lateral traffic according to validated rules. | Allowed/refused flows, rule status, blocked sources. |
@@ -91,8 +93,6 @@ The interface gives operators a direct view of the appliance state, detected equ
 ## Technology role map
 
 The implementation can rely on well-known open-source components while keeping the product value in integration, orchestration, presentation, and evidence handling.
-
-![Ova Security technology role map](assets/report-diagrams/framed/technology-map.png)
 
 | Component family | Public role |
 | --- | --- |
@@ -150,15 +150,11 @@ The runtime layer starts the appliance services, supervises process state, expos
 
 #### Firewall engine
 
-![Firewall engine](assets/report-diagrams/framed/firewall-architecture.png)
+![Firewall and detection architecture](assets/report-diagrams/framed/suricata-firewall-architecture.png)
 
 The firewall engine applies the validated security policy at the network edge. It receives interface zones, operator-approved rules, and block decisions from the backend, then returns rule state, allowed/refused flow information, and auditable change events.
 
 #### Intrusion detection and traffic analysis
-
-![Suricata intrusion detection architecture](assets/report-diagrams/framed/suricata-architecture.png)
-
-![Zeek traffic analysis architecture](assets/report-diagrams/framed/zeek-architecture.png)
 
 Detection and traffic analysis transform network activity into alerts, protocol metadata, flow history, and investigation context. This layer feeds the correlation engine so the dashboard can show what happened, where it happened, and which asset is affected.
 

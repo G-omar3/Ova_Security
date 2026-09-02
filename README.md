@@ -10,6 +10,7 @@ This repository presents the architecture at a public level. It does not contain
 - [Edge network position](#edge-network-position)
 - [Internal architecture](#internal-architecture)
 - [Functional modules](#functional-modules)
+- [Product dashboard views](#product-dashboard-views)
 - [Technology role map](#technology-role-map)
 - [How the system works](#how-the-system-works)
 - [Technology details](#technology-details)
@@ -17,7 +18,6 @@ This repository presents the architecture at a public level. It does not contain
 - [Log integrity and auditability](#log-integrity-and-auditability)
 - [Assistant and knowledge layer](#assistant-and-knowledge-layer)
 - [Resilience mode](#resilience-mode)
-- [Operational lifecycle](#operational-lifecycle)
 - [Security boundaries](#security-boundaries)
 - [License](#license)
 
@@ -55,8 +55,6 @@ Ova Security is designed to sit at the edge of the protected network. It receive
 
 The platform is structured in layers. Each layer has a clear responsibility so the solution can remain understandable, auditable, and maintainable.
 
-![Ova Security internal architecture](assets/report-diagrams/framed/system-architecture.png)
-
 ### Layer responsibilities
 
 | Layer | Responsibility |
@@ -70,8 +68,6 @@ The platform is structured in layers. Each layer has a clear responsibility so t
 
 Ova Security is presented as a product, not as a collection of disconnected tools. The modules below form one operational chain.
 
-![Ova Security use case architecture](assets/report-diagrams/framed/use-case-architecture.png)
-
 | Module | Purpose | Typical output |
 | --- | --- | --- |
 | Firewall control | Blocks unauthorized inbound or lateral traffic according to validated rules. | Allowed/refused flows, rule status, blocked sources. |
@@ -81,6 +77,14 @@ Ova Security is presented as a product, not as a collection of disconnected tool
 | Log management | Collects, rotates, compresses, and retains operational logs. | Searchable event history and controlled storage usage. |
 | Integrity register | Chains and signs important events to detect later alteration. | Verifiable audit trail. |
 | SOC assistant | Explains alerts, reports, logs, and procedures in operator language. | Summaries, diagnostic steps, recommended actions. |
+
+## Product dashboard views
+
+The interface gives operators a direct view of the appliance state, detected equipment, active services, incidents, and audit indicators. The screenshots below are public documentation views with anonymized names and documentation IP addresses.
+
+![Ova Security dashboard overview](assets/report-diagrams/framed/dashboard-overview.png)
+
+![Ova Security detected equipment](assets/report-diagrams/framed/dashboard-assets.png)
 
 ## Technology role map
 
@@ -255,21 +259,6 @@ The resilience cycle follows six stages:
 | Minimal protection | Keep essential filtering and local protection active even when advanced services are degraded. |
 | Recovery | Restart, resynchronize, or restore affected services in a controlled way. |
 | Return to normal | Validate restored services and resume standard operation with updated evidence. |
-
-## Operational lifecycle
-
-The architecture supports a continuous cycle: observe, understand, decide, act, and prove.
-
-![Ova Security operational lifecycle](assets/report-diagrams/framed/operational-sequence.png)
-
-| Phase | Description |
-| --- | --- |
-| Observe | Collect network, service, system, and security signals. |
-| Correlate | Link events to assets, services, rules, and previous activity. |
-| Prioritize | Highlight the most important risks first. |
-| Decide | Let the operator validate rules, exceptions, and remediation actions. |
-| Enforce | Apply firewall or operational decisions in a controlled way. |
-| Prove | Store a signed trace of sensitive changes and security decisions. |
 
 ## Security boundaries
 

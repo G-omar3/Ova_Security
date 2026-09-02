@@ -86,6 +86,8 @@ The interface gives operators a direct view of the appliance state, detected equ
 
 ![Ova Security detected equipment](assets/report-diagrams/framed/dashboard-assets.png)
 
+![Ova Security integrity dashboard](assets/report-diagrams/framed/integrity-dashboard.png)
+
 ## Technology role map
 
 The implementation can rely on well-known open-source components while keeping the product value in integration, orchestration, presentation, and evidence handling.
@@ -190,8 +192,6 @@ The assistant retrieves approved project context before producing an answer. It 
 
 The architecture separates raw logs, normalized events, operator actions, and signed evidence. This separation makes the platform easier to audit and safer to operate.
 
-![Ova Security data and evidence model](assets/report-diagrams/framed/integrity-control.png)
-
 ### Main data families
 
 | Data family | Examples | Treatment |
@@ -205,8 +205,6 @@ The architecture separates raw logs, normalized events, operator actions, and si
 ## Log integrity and auditability
 
 The log strategy has two goals: keep the system lightweight and preserve proof. The appliance should reduce disk usage without destroying the chain of evidence.
-
-![Ova Security log integrity workflow](assets/report-diagrams/framed/ledger-chain-architecture.png)
 
 ### Integrity workflow
 
@@ -230,8 +228,6 @@ The log strategy has two goals: keep the system lightweight and preserve proof. 
 ## Assistant and knowledge layer
 
 The assistant is not a replacement for the operator. It is a support layer that helps interpret alerts, explain logs, summarize reports, and propose diagnostic steps from approved project knowledge.
-
-![Ova Security assistant and knowledge architecture](assets/report-diagrams/framed/llm-rag-architecture.png)
 
 ### Assistant capabilities
 

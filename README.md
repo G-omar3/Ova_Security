@@ -1,5 +1,7 @@
 # Ova Security
 
+[Landing page](https://ovasecurity.vercel.app/)
+
 Public architecture documentation for **Ova Security**, a compact wired cybersecurity appliance designed to observe, filter, audit, and preserve local evidence for small and medium networks.
 
 This repository presents the architecture at a public level. It does not contain secrets, internal credentials, production configuration, private deployment procedures, or customer data.

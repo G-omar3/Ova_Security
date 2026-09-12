@@ -44,6 +44,8 @@ The product is built around four principles:
 
 The appliance is represented as a compact edge box. The repository includes the supplied 3D enclosure model directly, without converting it to an animated preview, so its original geometry, colors, and materials stay intact.
 
+![OvaSecurity appliance model](assets/report-diagrams/framed/appliance-model.png)
+
 [Open the OvaSecurity GLB model](assets/models/ova-security-edge-appliance.glb)
 
 ## Edge network position

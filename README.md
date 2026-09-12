@@ -9,10 +9,12 @@ This repository presents the architecture at a public level. It does not contain
 ## Contents
 
 - [Product overview](#product-overview)
+- [Appliance visual model](#appliance-visual-model)
 - [Edge network position](#edge-network-position)
 - [Internal architecture](#internal-architecture)
 - [Functional modules](#functional-modules)
 - [Product dashboard views](#product-dashboard-views)
+- [Signed reports and exports](#signed-reports-and-exports)
 - [Technology role map](#technology-role-map)
 - [How the system works](#how-the-system-works)
 - [Technology details](#technology-details)
@@ -37,6 +39,12 @@ The product is built around four principles:
 | Wired-first deployment | The appliance is placed on a physical network path to separate internet, protected LAN, and administration access. |
 | Explainable operations | Alerts, blocked flows, scans, and administrative actions are presented with traceable context. |
 | Evidence preservation | Important events are recorded in an integrity-oriented register so later changes can be detected. |
+
+## Appliance visual model
+
+The appliance is represented as a compact edge box. The animated view below is generated from the supplied GLB enclosure model and is included so the repository shows the physical product concept, not only software diagrams.
+
+![Animated Ova Security appliance model](assets/report-diagrams/framed/box-model-animated.gif)
 
 ## Edge network position
 
@@ -91,6 +99,33 @@ The interface gives operators a direct view of the appliance state, detected equ
 ![Ova Security detected equipment](assets/report-diagrams/framed/dashboard-assets.png)
 
 ![Ova Security integrity dashboard](assets/report-diagrams/framed/integrity-dashboard.png)
+
+## Signed reports and exports
+
+Ova Security includes a reporting layer for operational follow-up, security review, incident reconstruction, and audit evidence. Reports are generated from normalized events and can be tied back to the signed ledger so the operator can show when a report was produced, what it contained, and whether the associated evidence chain still validates.
+
+![Ova Security signed reports dashboard](assets/report-diagrams/framed/reports-dashboard.png)
+
+### Report types
+
+| Report type | Purpose | Typical content |
+| --- | --- | --- |
+| Executive report | Gives management a readable security summary. | Network summary, number of assets, main alerts, high risks, critical vulnerabilities, recommended actions. |
+| Equipment report | Documents one host or device in detail. | Identity, traffic, protocols, alerts, vulnerabilities, and blocking history for a selected asset. |
+| Incident report | Reconstructs a security event. | Timeline, source and destination IPs, Suricata alerts, Zeek events, actions taken, and integrity proof. |
+| Integrity report | Proves the state of the evidence chain. | Number of changes, modified files, signatures, chain state, last hash, and verification result. |
+
+### Export formats
+
+| Format | Use |
+| --- | --- |
+| PDF | Human-readable signed report for audits, management reviews, and incident documentation. |
+| CSV | Lightweight export for SIEM import, spreadsheet filtering, or automated processing. |
+| Excel | Structured workbook for operational review, sorting, filtering, and sharing with non-technical teams. |
+
+The platform settings also control presentation preferences such as interface language, table density, theme, and date format, so exported views remain consistent with operational needs.
+
+![Ova Security platform settings](assets/report-diagrams/framed/settings-dashboard.png)
 
 ## Technology role map
 

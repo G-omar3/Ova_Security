@@ -42,7 +42,7 @@ The product is built around four principles:
 
 ## Appliance visual model
 
-The appliance is represented as a compact edge box. The animated view below is generated from the supplied GLB enclosure model and is included so the repository shows the physical product concept, not only software diagrams.
+The appliance is represented as a compact edge box. The repository includes the supplied 3D enclosure model directly as [`ova-security-edge-appliance.glb`](assets/models/ova-security-edge-appliance.glb). The animated view below is generated from that same GLB model so the repository shows the physical product concept, not only software diagrams.
 
 ![Animated Ova Security appliance model](assets/report-diagrams/framed/box-model-animated.gif)
 
